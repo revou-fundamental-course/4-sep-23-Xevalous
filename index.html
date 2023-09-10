@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Luas & Keliling persegi</title>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<div class="switch">
+				<button onclick="show('luas')">Hitung Luas Persegi</button>
+				<button onclick="show('keliling')">Hitung Keliling Persegi</button>
+			</div>
+			<div class="card" id="content-luas-persegi">
+				<div class="content">
+					<div class="content-title">
+						<h4>Luas Persegi</h4>
+					</div>
+					<hr />
+					<div class="rumus-container">
+						<img src="/img/rumus-luas-persegi.png" alt="Foto rumus Luas Persegi" width="100" />
+						<div class="rumus">
+							<p>Rumus Luas Persegi:</p>
+							<p>L = S x S</p>
+							<div class="penjelasan-variable">
+								<p>- L = Luas Persegi</p>
+								<p>- S = Sisi Persegi</p>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<div class="jawaban"></div>
+					<div class="form-container">
+						<div class="form-input">
+							<input type="number" min="1" class="input-rumus" id="input-sisi-luas" placeholder="Masukan angka luas persegi" required />
+							<button onclick="hitung('luas')">Hitung</button>
+						</div>
+						<button class="reset-button" onclick="reset('luas')">Reset</button>
+					</div>
+				</div>
+			</div>
+			<div class="card" id="content-keliling-persegi" style="display: none">
+				<div class="content">
+					<div class="content-title">
+						<h4>Keliling Persegi</h4>
+					</div>
+					<hr />
+					<div class="rumus-container">
+						<img src="/img/rumus-keliling-persegi.png" alt="Foto rumus Luas Persegi" width="100" />
+						<div class="rumus">
+							<p>Rumus Keliling Persegi:</p>
+							<p>K = 4 x S</p>
+							<div class="penjelasan-variable">
+								<p>- K = Keliling Persegi</p>
+								<p>- S = Sisi Persegi</p>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<div class="jawaban"></div>
+					<div class="form-container">
+						<div class="form-input">
+							<input type="number" min="1" class="input-rumus" id="input-sisi-keliling" placeholder="Masukan angka Keliling persegi" required />
+							<button onclick="hitung('keliling')">Hitung</button>
+						</div>
+						<button class="reset-button" onclick="reset('keliling')">Reset</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="/js/script.js"></script>
+	</body>
+</html>
