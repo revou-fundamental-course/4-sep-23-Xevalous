@@ -4,6 +4,9 @@ function hitung(tipe) {
 		case 'luas':
 			resetButton = document.querySelector('#content-luas-persegi .form-container > .reset-button');
 			formInput = document.querySelector('#content-luas-persegi .form-container input');
+			if (formInput.value.toString().length === 0) {
+				return alert('Kamu memasukan nilai kosong, silahkan di isi angka nya terlebih dahulu');
+			}
 			jawaban = document.querySelector('#content-luas-persegi .jawaban');
 			jawaban.innerHTML = '';
 			p = document.createElement('p');
@@ -16,6 +19,9 @@ function hitung(tipe) {
 		case 'keliling':
 			resetButton = document.querySelector('#content-keliling-persegi .form-container > .reset-button');
 			formInput = document.querySelector('#content-keliling-persegi .form-container input');
+			if (formInput.value.toString().length === 0) {
+				return alert('Kamu memasukan nilai kosong, silahkan di isi angka nya terlebih dahulu');
+			}
 			jawaban = document.querySelector('#content-keliling-persegi .jawaban');
 			jawaban.innerHTML = '';
 			p = document.createElement('p');
